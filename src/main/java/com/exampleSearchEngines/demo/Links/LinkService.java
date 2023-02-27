@@ -10,6 +10,8 @@ public class LinkService {
 
     @Autowired
     LinkRepo linkRepo;
+    YandexSearch yandexSearch;
+
 
     public List<Link> getLinks() {
         List<Link> links = new ArrayList<>();
@@ -33,8 +35,11 @@ public class LinkService {
         linkRepo.deleteAll();
     }
 
+    //Logic:
 
-    public String getText(String text) {
-        return "text + checked!";
+    public String sendText(String text) {
+       return text;
     }
+
+
 }

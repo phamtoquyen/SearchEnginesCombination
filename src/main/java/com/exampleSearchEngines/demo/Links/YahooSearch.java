@@ -7,4 +7,7 @@ public class YahooSearch extends SerpApiSearch {
     public YahooSearch(Map<String, String> parameter, String apiKey) {
         super("Yahoo", parameter, apiKey);
     }
+    public YahooSearch() {
+        super("Yahoo");
+    }
 }

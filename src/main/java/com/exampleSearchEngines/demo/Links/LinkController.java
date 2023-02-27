@@ -50,12 +50,5 @@ public class LinkController {
         linkService.deleteLinks();
     }
 
-    //Logic:
-    @RequestMapping(value = "/sendText", method = RequestMethod.POST)
-    public String sendText(@RequestBody String text) {
-        System.out.println("Received text message: " + text);
-        return "Text message received: " + text;
-    }
-
 
 }
