@@ -1,16 +1,20 @@
 package com.exampleSearchEngines.demo.Links;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class LinkController {
+public class LinkController{
 
     @Autowired
     LinkService linkService;
+
+    @Autowired
+    ILinkResource linkResource;
 
 
 
@@ -49,6 +53,14 @@ public class LinkController {
     public void deleteLinks() {
         linkService.deleteLinks();
     }
+
+    //GET: return a list of List<LinkDomain> when given a text
+    @RequestMapping("/search/{text}")
+    public ResponseEntity<List<Link>> getLinks(@PathVariable String text){
+        List<Link> list = linkResource.search(text);
+        return (ResponseEntity<List<Link>>) list;
+    }
+
 
 
 }

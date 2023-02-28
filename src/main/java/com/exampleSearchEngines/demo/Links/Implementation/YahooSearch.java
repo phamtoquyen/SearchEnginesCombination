@@ -1,4 +1,4 @@
-package com.exampleSearchEngines.demo.Links;
+package com.exampleSearchEngines.demo.Links.Implementation;
 
 import java.util.Map;
 

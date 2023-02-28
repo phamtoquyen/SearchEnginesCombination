@@ -1,4 +1,5 @@
 package com.exampleSearchEngines.demo.Links;
+import com.exampleSearchEngines.demo.Links.Implementation.YandexSearch;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
@@ -35,11 +36,9 @@ public class LinkService {
         linkRepo.deleteAll();
     }
 
-    //Logic:
 
-    public String sendText(String text) {
-       return text;
-    }
+
+
 
 
 }

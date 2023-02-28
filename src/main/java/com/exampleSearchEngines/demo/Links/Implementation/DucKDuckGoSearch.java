@@ -1,8 +1,8 @@
-package com.exampleSearchEngines.demo.Links;
+package com.exampleSearchEngines.demo.Links.Implementation;
 
 import java.util.Map;
 
-public class DucKDuckGoSearch extends SerpApiSearch{
+public class DucKDuckGoSearch extends SerpApiSearch {
     public DucKDuckGoSearch(Map<String, String> parameter, String apiKey) {
         super("DuckDuckGo", parameter, apiKey);
     }

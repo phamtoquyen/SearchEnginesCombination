@@ -9,56 +9,72 @@ public class Link {
 
     @Id
     private String id;
-    private boolean valid;
+    private String searchText1;
+    private String searchText2;
     private int difficulty;
-    private int len;
+    private int pageLen;
     private String url;
+
 
     public Link() {
 
     }
 
-    public Link(String id, boolean valid, int difficulty, int len, String url) {
+    public Link(String id, int difficulty, int len, String url, String searchText1, String searchText2) {
         this.id = id;
-        this.valid = valid;
         this.difficulty = difficulty;
-        this.len = len;
+        this.pageLen = len;
         this.url = url;
+        this.searchText1 = searchText1;
+        this.searchText2 = searchText2;
     }
+
 
     public String getId() {
         return id;
     }
 
-    public boolean isValid() {
-        return valid;
+    public String getSearchText1() {
+        return searchText1;
+    }
+
+    public String getSearchText2() {
+        return searchText2;
+    }
+
+    public int getPageLen() {
+        return pageLen;
     }
 
     public int getDifficulty() {
         return difficulty;
     }
 
-    public int getLen() {
-        return len;
-    }
-
     public String getUrl() {
         return url;
-    }
-
-    public void setValid(boolean valid) {
-        this.valid = valid;
     }
 
     public void setDifficulty(int difficulty) {
         this.difficulty = difficulty;
     }
 
-    public void setLen(int len) {
-        this.len = len;
-    }
-
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setSearchText1(String searchText1) {
+        this.searchText1 = searchText1;
+    }
+
+    public void setSearchText2(String searchText2) {
+        this.searchText2 = searchText2;
+    }
+
+    public void setPageLen(int pageLen) {
+        this.pageLen = pageLen;
     }
 }
